@@ -1,6 +1,6 @@
 # DCAT-AGO
 
-Automates the metadata migration process between any open data site utilizing the (Data Catalog Vocabulary (DCAT))[https://www.w3.org/TR/vocab-dcat/] and ArcGIS Online.
+Automates the metadata migration process between any open data site utilizing the [Data Catalog Vocabulary (DCAT)](https://www.w3.org/TR/vocab-dcat/) and ArcGIS Online.
 
 Currently migrates metadata information for the following fields:
 
