@@ -7,8 +7,6 @@ copy(args).then(console.log).catch(console.error)
 async function copy (args) {
   const dcatUrl = `${args.site}/data.json`
   const catalog = await fetch(dcatUrl).then(r => { return r.json() })
-  console.log(catalog.dataset.length)
-  console.log(catalog.dataset.map)
 
   const formatted = catalog.dataset.map(d => {
     return {
@@ -21,7 +19,6 @@ async function copy (args) {
   })
 
   const token = await generateToken({ username: args.username, password: args.password, host: args.portal })
-  console.log(token)
   for (const dataset of formatted) {
     await fetch(`${args.portal}/sharing/rest/content/users/${args.username}/addItem?token=${token}&f=json`, {
       body: encodeForm(dataset),
